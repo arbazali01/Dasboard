@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin DashBoard</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <form class="form-data" onsubmit="event.preventDefault();onformSubmit()">
+        <div>
+          <input type="text" name="project" id="fullname" placeholder="Name of Project" required>
+        </div>
+
+        <div>
+          <input type="date" name="date" id="date" required>
+        </div>
+
+        <div>
+         <input type="text" placeholder="Project Status(Completed / Pending)" name="status" id="status" required>
+        </div>
+
+        <div>
+         <input type="number" placeholder="No. of teammates" name="team" id="teammembers" required>
+        </div>
+        <div>
+          <input type="number" placeholder="Progess in percentage" name="progess" id="progress" required>
+        </div>
+        <div>
+          <button class="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- ///////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!--Start Navbar -->
+
+  <!-- Start Content  -->
+  <div class="content">
+    <div class="wrapper">
+      <div class="row1">
+        <div class="box">
+          <i class="fas fa-archive ico"></i>
+          <p>10</p>
+          <p>Total Projects</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-th ico"></i>
+          <p>10</p>
+          <p>Total Projects</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-file ico"></i>
+          <p>10</p>
+          <p>Total Projects</p>
+        </div>
+        <div class="box">
+
+          <input class="search" type="text" name="" placeholder="Search here">
+          <a href="#"><i class="fas fa-search"></i></a>
+        </div>
+      </div>
+      <div class="row2">
+
+        <table class="table">
+          <div class="table-body">
+            <div class="table-row">
+              <div>#</div>
+              <div class="project">Projects</div>
+              <div class="date">Start Date</div>
+              <div class="status">Status</div>
+              <div class="team">Team</div>
+              <div class="progress">Progress</div>
+              <div class="actions">Actions</div>
+            </div>
+            <div class="table-row">
+              <div>1</div>
+              <div class="project">New Admin Design</div>
+              <div class="date">02/5/2019</div>
+              <div class="status">
+                <span class="cancel">Completed</span>
+              </div>
+              <div class="team">
+                <img class="pic" src="img.png" alt="">
+              </div>
+              <div class="progress">
+                <div class="bar">100%</div>
+              </div>
+              <div class="actions">
+                <a href="#"><i class="fas fa-pen edit"></i></a>
+                <a href="#"><i class="fas fa-times delete"></i></a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div>2</div>
+              <div class="project">Landing Page Design</div>
+              <div class="date">04/6/2019</div>
+              <div class="status">
+                <span class="cancel">Pending</span>
+              </div>
+              <div class="team">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+              </div>
+              <div class="progress">
+                <div class="bar">78%</div>
+              </div>
+              <div class="actions">
+                <a href="#"><i class="fas fa-pen edit"></i></a>
+                <a href="#"><i class="fas fa-times delete"></i></a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div>3</div>
+              <div class="project">Multipurpose Landing Template</div>
+              <div class="date">06/6/2019</div>
+              <div class="status">
+                <span class="cancel">Completed</span>
+              </div>
+              <div class="team">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+              </div>
+              <div class="progress">
+                <div class="bar">100%</div>
+              </div>
+              <div class="actions">
+                <a href="#"><i class="fas fa-pen edit"></i></a>
+                <a href="#"><i class="fas fa-times delete"></i></a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div>4</div>
+              <div class="project">Blog Template Design</div>
+              <div class="date">07/5/2019</div>
+              <div class="status">
+                <span class="cancel">Completed</span>
+              </div>
+              <div class="team">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+              </div>
+              <div class="progress">
+                <div class="bar">100%</div>
+              </div>
+              <div class="actions">
+                <a href="#"><i class="fas fa-pen edit"></i></a>
+                <a href="#"><i class="fas fa-times delete"></i></a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div>5</div>
+              <div class="project">Brand Logo Design</div>
+              <div class="date">08/6/2019</div>
+              <div class="status">
+                <span class="cancel">Pending</span>
+              </div>
+              <div class="team">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+              </div>
+              <div class="progress">
+                <div class="bar">54%</div>
+              </div>
+              <div class="actions">
+                <a href="#"><i class="fas fa-pen edit"></i></a>
+                <a href="#"><i class="fas fa-times delete"></i></a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div>6</div>
+              <div class="project">Re-design Landing Page</div>
+              <div class="date">10/6/2019</div>
+              <div class="status">
+                <span class="cancel">Pending</span>
+              </div>
+              <div class="team">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+              </div>
+              <div class="progress">
+                <div class="bar">41%</div>
+              </div>
+              <div class="actions">
+                <a href="#"><i class="fas fa-pen edit"></i></a>
+                <a href="#"><i class="fas fa-times delete"></i></a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div>7</div>
+              <div class="project">Re-design - Dashboard</div>
+              <div class="date">12/5/2019</div>
+              <div class="status">
+                <span class="cancel">Completed</span>
+              </div>
+              <div class="team">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+              </div>
+              <div class="progress">
+                <div class="bar">100%</div>
+              </div>
+              <div class="actions">
+                <a href="#"><i class="fas fa-pen edit"></i></a>
+                <a href="#"><i class="fas fa-times delete"></i></a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div>8</div>
+              <div class="project">Landing Page Design</div>
+              <div class="date">13/6/2019</div>
+              <div class="status">
+                <span class="cancel">Pending</span>
+              </div>
+              <div class="team">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+              </div>
+              <div class="progress">
+                <div class="bar">84%</div>
+              </div>
+              <div class="actions">
+                <a href="#"><i class="fas fa-pen edit"></i></a>
+                <a href="#"><i class="fas fa-times delete"></i></a>
+              </div>
+            </div>
+            <div class="table-row">
+              <div>9</div>
+              <div class="project">Multipurpose Landing Template</div>
+              <div class="date">15/6/2019</div>
+              <div class="status">
+                <span class="cancel">Completed</span>
+              </div>
+              <div class="team">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+                <img class="pic" src="img.png" alt="">
+
+              </div>
+              <div class="progress">
+                <div class="bar">100%</div>
+              </div>
+              <div class="actions">
+                <a href="#"><i class="fas fa-pen edit"></i></a>
+                <a href="#"><i class="fas fa-times delete"></i></a>
+              </div>
+            </div>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn">
+    <button type="button" name="button" onclick="openModal()">Add Project</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
